@@ -1,4 +1,44 @@
-nav {
+nav, main {
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.more-info {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.nav-page {
+  width: 55px;
+  margin: 5px;
+  padding: 6px;
+  border-radius: 5px;
+
+  background: #d3d3d3;
+  text-align: center;
+  line-height: 100%;
+
+  font-family: sans-serif;
+  font-size: 1px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.nav-page:hover {
+  background-color: #525252;
+  color: white;
+}
+
+.home {
+  font-weight: 600;
+}
+
+h2 {
+  padding: 0 10px;
 }
