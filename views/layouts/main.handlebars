@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/global.css" />
+    <title>Express exam</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/global.css" />
-  <title>Express exam</title>
-</head>
+  <body>
+    <header>
+      <nav>
+        <div class="home nav-page">
+          <a href="/">回到首頁</a>
+        </div>
+        <ul class="more-info">
+          <li class="about nav-page ">
+            <a href="About">About</a>
+          </li>
+          <li class="portfolio nav-page ">
+            <a href="Portfolio ">Portfolio</a>
+          </li>
+          <li class="contact nav-page">
+            <a href="Contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <nav>
-      <div class="home nav-page">
-        <a href="/">回到首頁</a>
-      </div>
-      <ul class="more-info">
-        <li class="about nav-page ">
-          <a href="About">About</a>
-        </li>
-        <li class="portfolio nav-page ">
-          <a href="Portfolio ">Portfolio</a>
-        </li>
-        <li class="contact nav-page">
-          <a href="Contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    {{{body}}}
+    
+    {{!-- 
+      嘗試用 event listener 為點選的 nav-page 頁面增添 active class,
+      不過發現點到 <a> 後網頁會 render 導致此 function 失效, 卡了2-3天想不到更好的辦法決定先提交成果
+     --}}
+    {{!-- <script>
+      const pageControl = document.querySelector('.more-info')
+      
+      function handlePageClicked(e) {
+        const liNode = e.target.closest('li')
+        const aNode = liNode.firstElementChild
 
-  {{{body}}}
-  
-</body>
+        liNode.classList.add('active')
+        aNode.classList.add('active')
+        console.log(liNode)
+        console.log(aNode)
+      }
 
+      pageControl.addEventListener('click', handlePageClicked)
+    </script> --}}
+  </body>
 </html>

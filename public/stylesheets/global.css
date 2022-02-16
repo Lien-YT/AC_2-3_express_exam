@@ -9,6 +9,11 @@ nav, main {
 
 a {
   color: black;
+  /* 
+  不確定為何無法透過 .nav-page 修改 <a> 內的字體顏色，
+  嘗試用過 -webkit-appearance: none 也未解決，
+  在這邊設定 color 雖然成功改色，但 :active 時滑鼠點選位置不對仍看的出不協調
+  */
   text-decoration: none;
 }
 
@@ -44,7 +49,7 @@ ul {
   cursor: pointer;
 }
 
-.nav-page:active, a:active {
+.nav-page:active, a:active, .active {
   background-color: #525252;
   color: white;
 }
